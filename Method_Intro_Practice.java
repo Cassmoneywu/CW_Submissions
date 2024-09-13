@@ -54,9 +54,16 @@ public class Method_Intro_Practice {
 	double pi=3.14;
 	double diameter=2*x;
 	double circumference=2*pi*x;
-    double area=pi*x*x;
+    	double area=pi*x*x;
 	
-    System.out.println("the radius of the circle is"+ radius +" which also says the " );
+    System.out.println("the radius of the circle is "+ radius +" which also says the diameter is " + diameter + ", the circumference is " + circumference + ", and the area is " + area + ".");
 		
 		}
-	public static void printMathStuff(int x, int y) {
+	public static void printMathStuff(int x, int y) 
+	int sum=x+y;
+	int differnce=x-y;
+	int product=x*y;
+	int quotient=x/y;
+	int modulo=x%y;
+	System.out.println("the two numbers are " + x + " and " + y + " which means the sum is " + sum + ", the differnce is " + difference + ",the product is " + product + ", the qoutient is " + quotient + ",and the modulo is " + modulo + ".");
+	{
