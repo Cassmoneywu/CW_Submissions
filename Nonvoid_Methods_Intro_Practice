@@ -1,0 +1,93 @@
+
+public class Method_Intro_Practice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+
+		System.out.println(stateName());
+		System.out.println(stateEyeColor());
+		System.out.println(stateFavoriteFood());
+		System.out.println(stateHairStyle());
+		System.out.println(stateBestFriend());
+		System.out.println(printCircleStats(8.0));
+		System.out.print(printMathStuff(9.0,9.0));
+		
+	
+	}
+    // this method states my name 
+	
+	public static String stateName ()
+	{
+		
+		return ("my name is Cassidy Hurban");
+	
+		}
+	
+	// this method states my eye color
+	public static String stateEyeColor()
+	
+	{
+	
+		return ("my eye color is brown");
+		
+		}
+	
+	//this method states my hair style
+	
+	public static String stateHairStyle()
+	{
+		return ("My hair style has bangs");
+	}
+	public static String stateBestFriend()
+		{
+	//this method states my best friends names 
+		return ("My bestfriends name is Kaihokulani Helen Hanley");
+	
+		}
+	//this method states my favorite food
+	public static String stateFavoriteFood()
+		{
+		return ("my favorite food is sushi");
+		}
+			
+		this method prints circle stats 
+		public static double printCircleStats(double x) 
+		{
+		
+		final double pi=3.14;
+		
+		double radius = x;
+		System.out.println("radius= " + x);
+		
+		double diameter=2*x;
+		System.out.println("diameter= " + diameter);
+			
+		double circumference=2*pi*x;
+		System.out.println("circumference= " + circumference);
+
+		double area=pi*x*x;
+		System.out.print("area= " + radius);
+		return area;
+		
+		}
+	    //this method prints mathstuff
+	    public static double printMathStuff(double x, double y) 
+	    {
+	    double sum=x+y;
+	    System.out.println("sum= "+ sum);
+		
+	    double difference=x-y;
+		System.out.println("difference" + difference);
+	    
+	    double product=x*y;
+		System.out.println("product= " + product);
+	    
+	    double quotient=x/y;
+		System.out.println("quotient= " + quotient);
+	    
+	    double modulo=x%y;
+	    System.out.println("modulo=" + modulo);
+		return modulo;
+	    }
+}
