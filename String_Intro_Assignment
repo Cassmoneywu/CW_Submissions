@@ -1,0 +1,53 @@
+/*
+ * String Intro Assignment
+ * 
+ */
+import java.util.Scanner;
+
+public class Strings_Intro {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner myReader = new Scanner(System.in);
+		
+		String myWord = new String(myReader.next());
+		
+	
+		myReader.close();
+
+		printSecondAndLastLetter(myWord);
+		System.out.println(findTheEthat(myWord));
+		System.out.println(getLength(myWord));
+		printFirstAndLastThree(myWord);
+	}
+	// this method is used to print out the first and last letter
+	
+	public static void printSecondAndLastLetter(String myWord)
+	{
+		System.out.println("the second letter of the word is " + myWord.charAt(1));
+		System.out.println("the last letter of the word is "+myWord.charAt(myWord.length()-1));
+	}
+
+	//this method finds the index which is e
+
+	public static String findTheEthat(String e)
+	
+	{
+		return("the first 'e' character is " + e.indexOf("e"));
+	}
+	
+	//this method is used to get the length of the specific word 
+	
+	public static String getLength(String hamburger)
+	{
+		return("the length of this specifc word is " + hamburger.length());
+	}
+	
+	// this method prints the first three and last three characters of the word 
+	
+	public static void printFirstAndLastThree(String First_LastThree)
+	{
+		System.out.println("the first three characters of the word are " + First_LastThree.substring(0,3));
+		System.out.println("the last three charcters of the word are " + First_LastThree.substring(First_LastThree.length()-3));
+	}
+}
