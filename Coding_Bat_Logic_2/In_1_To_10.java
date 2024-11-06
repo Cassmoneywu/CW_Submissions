@@ -6,7 +6,7 @@ public boolean in1To10(int n, boolean outsideMode) {
      return true;
    }
  }
-  else if(outsideMode)
+  else if(outsideMode == true)
   {
     if(n<=1 || n>=10)
     {
