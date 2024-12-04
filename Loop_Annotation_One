@@ -1,0 +1,32 @@
+ *Gets the month from the index and checks it and  corresepnd the month with that specific number for example if u give it 1 it would return january 
+ *
+*/
+public static String getMonth(int n)
+	{
+// This String is month being instansiated as actual moths as well as decaring it as a string   						
+String months = "January February March April May June "
+		+ "July August September October November December ";
+
+    // This for loop is telling us that int i = 1, as well as i being <= 12 and keeps on adding until it’s not true it stops.  
+	for (int i = 1; i <= 12; i++)
+{
+// sets a new variable/int “sL”  As months.indexOf starts off with 7 
+int sL = months.indexOf(' ');
+
+      // sets a If statement that being n == i  
+	if (n == i)
+		{
+     // returns the substring along with the minimum and maximum. Minimum being 0 and maximum with whateve rnumber you give sL
+		return months.substring(0, sL);
+		}
+      // not true it moves on 
+	else
+		{
+        //sets months = to substring and then the months changes and moves on to the next month if it’s not n==i
+		months = months.substring(sL + 1);
+		}
+}
+//depending on what number you chose it should return that specific month if it doesnt then it return: 
+	return " /*  invalid number  */ ";
+		
+}
