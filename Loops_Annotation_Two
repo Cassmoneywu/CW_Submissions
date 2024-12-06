@@ -1,0 +1,50 @@
+/**
+	 * This method is not static. What does this mean about how the method works? After code tracing, also answer: Since it is not static it has to rely on an object 
+   	 * the following question: what does this method do?: This method checks the string and you give the “c” a new character and if the string has that c then it returns the index if it doesn't then it returns -1 
+	 * 
+	 */
+	public int doesSomething(char c)
+	{
+		/*
+		 * This line below works even though str was not instantiated in the method.
+		 * What conclusion can you draw from this fact?
+		 * A conclusion that I can make is you have to find the str that can return the index 
+		 * 
+		 * 
+		 * 
+		 * */
+
+		int l = str.length();
+		
+		/*
+		 * Why might executing the loop below result in a syntax error?
+		 * This might result in a syntax error because it's less than or equal to. For example if the c is an x then the code just keeps on going. As well as the index not being "inbounds" with the code/string 
+		 * 
+		 * 
+		 */
+		for (int i = 0; i <= l; i++)
+		{
+			
+			/*
+			 * What is this line checking for? What does it return if it is true?
+			 * The line is checking if c is in the string. It return the index if it’s true
+			 * 
+			 */
+			if (str.charAt(i) == c)
+			{
+				return i;
+			}
+			
+		}
+		/*
+		 * What is the purpose of this line below? :purpose of this line is to give the code a return statement when finding the c is unsuccessful. 
+		 * Think about what needs to happen for it to be reached.: The code goes through all of the index but still does not find c so then it return -1
+		 * 
+		 * 
+		 */
+		return -1;
+		
+	}
+
+
+
