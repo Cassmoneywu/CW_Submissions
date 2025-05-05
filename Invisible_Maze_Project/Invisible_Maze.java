@@ -110,17 +110,22 @@ static Scanner myReader = new Scanner (System.in);
 			
 			else
 			{
+				// Check if the tile above is a wall
 				if(arr[player.getX()-1][player.getY()].isWall() == true)
 				{
+			        // Reveal the wall so the player can see it's blocked
 					arr[player.getX()-1][player.getY()].setRevealed(true);
 					System.out.println("yeaa that spot is a wall womp womp you're still on the exact same space");
 				}
 				else
 				{
-	// this updates the player's current position
+					// this updates the player's current position
 					arr[player.getX()-1][player.getY()].setRevealed(true);
+					// Removes player from current tile
 					arr[player.getX()][player.getY()].setHasPlayer(false);
+			        // Moves player to the new tile above
 					arr[player.getX()-1][player.getY()].setHasPlayer(true);
+			        // Update player's position
 					player.setX(player.getX()-1);
 					System.out.println("WOWWWWW you moved finally");
 				}
@@ -130,6 +135,7 @@ static Scanner myReader = new Scanner (System.in);
 		//moves down
 		else if(move.equals("down"))
 		{
+			// Checks if the player is trying to move out of the maze's bottom boundary
 			if(player.getX() >= 4)
 			{
 				System.out.println("bruh why you go so far out of bounds");
@@ -137,16 +143,22 @@ static Scanner myReader = new Scanner (System.in);
 			
 			else
 			{
+				// Checks if the tile below is a wall
 				if(arr[player.getX()+1][player.getY()].isWall() == true)
 				{
+					// Reveals the wall tile and inform the player
 					arr[player.getX()+1][player.getY()].setRevealed(true);
 					System.out.println("yeaa that spot is a wall womp womp you're still on the exact same space");
 				}
 				else
 				{
+					// Reveals the next tile
 					arr[player.getX()+1][player.getY()].setRevealed(true);
+			        // Removes the player from the current tile
 					arr[player.getX()][player.getY()].setHasPlayer(false);
+			        // Moves the player to the new tile
 					arr[player.getX()+1][player.getY()].setHasPlayer(true);
+			        // Updates the player's X position (move down)
 					player.setX(player.getX()+1);
 					System.out.println(player.getX());
 					System.out.println("WOWWWWW you moved finally");
@@ -165,16 +177,22 @@ static Scanner myReader = new Scanner (System.in);
 			
 			else
 			{
+			    // Check if the tile to the left is a wall
 				if(arr[player.getX()][player.getY()-1].isWall() == true)
 				{
+			        // Reveal the wall to inform the player it's blocked
 					arr[player.getX()][player.getY()-1].setRevealed(true);
 					System.out.println("yeaa that spot is a wall womp womp you're still on the exact same space");
 				}
 				else
 				{
+			        // Reveals the tile to the left
 					arr[player.getX()][player.getY()-1].setRevealed(true);
+			        // Removes the player marker from the current tile
 					arr[player.getX()][player.getY()].setHasPlayer(false);
+			        // Places the player marker on the new tile to the left
 					arr[player.getX()][player.getY()-1].setHasPlayer(true);
+			        // Updates the player's Y position to reflect the move left
 					player.setY(player.getY()-1);
 					System.out.println("WOWWWWW you moved finally");
 				}
@@ -184,6 +202,7 @@ static Scanner myReader = new Scanner (System.in);
 		//moves right 
 		else if(move.equals("right"))
 		{
+			// Check if the player is trying to move beyond the right boundary of the grid
 			if(player.getY() >= 4)
 			{
 				System.out.println("bruh why you go so far out of bounds");
@@ -191,28 +210,35 @@ static Scanner myReader = new Scanner (System.in);
 			
 			else
 			{
+			    // Check if the tile to the right is a wall
 				if(arr[player.getX()][player.getY()+1].isWall() == true)
 				{
+			        // Reveal the wall to inform the player it's blocked
 					arr[player.getX()][player.getY()+1].setRevealed(true);
 					System.out.println("yeaa that spot is a wall womp womp you're still on the exact same space");
 				}
 				else
 				{
+			        // Reveals the new tile to the right
 					arr[player.getX()][player.getY()+1].setRevealed(true);
+			        // Removes the player marker from the current tile
 					arr[player.getX()][player.getY()].setHasPlayer(false);
+			        // Moves the player to the new tile to the right
 					arr[player.getX()][player.getY()+1].setHasPlayer(true);
+			        // Updates the player's Y position
 					player.setY(player.getY()+1);
 					System.out.println("WOWWWWW you moved finally");
 				}
 			}
 		}
-		
+		//this makes it so the're are invalid input that the player puts in
 		else
 		{
 			System.out.println("bruh you serious try again that direction doesn't exist");
 		}
-		
+		// Displays the maze after the move
 		fixerUpper(arr);
+		 // Checks if player reached the goal
 		if(player.getX()== 4 && player.getY() == 4)
 		{
 			System.out.println("OHH? you won? congrats");
